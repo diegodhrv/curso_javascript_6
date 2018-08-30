@@ -1,9 +1,9 @@
 # Curso de Javascrip 6
 
-### 1. **Fundamentos**
-### 2. **Estrutura de controle**
-### 3. **Função**
-### 4. **Objeto**
+## 1. **Fundamentos**
+## 2. **Estrutura de controle**
+## 3. **Função**
+## 4. **Objeto**
 
 **Objetos Constates:**
 
@@ -88,4 +88,4 @@ sequencia.valor = 900
 console.log(sequencia.valor, sequencia.valor)
 ```
 
-### 5. **Array**
+## 5. **Array**
