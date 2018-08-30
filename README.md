@@ -132,7 +132,7 @@ console.log(obj)
 ### **Herança**
 >Primeira explicação
 
-`````javascript
+````javascript
 const ferrari = {
     modelo: 'F40',
     velMax: 324
@@ -154,6 +154,7 @@ console.log(typeof Object, typeof MeuObjeto)
 console.log(Object.prototype, MeuObjeto.prototype)
 
 ````
+
 >Segunda explicação, criando herança de fato
 ````javascript
 // Cadeia de protótipos (prototype chain)
@@ -202,6 +203,5 @@ console.log(volvo.status())
 
 ferrari.acelerarMais(300)
 console.log(ferrari.status())
-
 ````
 ## 5. **Array**
