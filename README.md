@@ -5,7 +5,7 @@
 ## 3. **Função**
 ## 4. **Objeto**
 
-**Objetos Constates:**
+### **Objetos Constates:**
 
 >Congelar o objeto para que não possa ser alterados seus valores de atributo
 ```javascript
@@ -32,7 +32,7 @@ console.log(pessoaConstante)
 
 ```
 
-**Notação Literal (criando atributos no objeto):**
+### **Notação Literal (criando atributos no objeto):**
 
 >Formas de criar atributos e funções nos objetos
 ```javascript
@@ -67,7 +67,7 @@ console.log(obj5)
 
 ```
 
-**Getters e Setters**
+### **Getters e Setters**
 >Encapsulamento
 
 ```javascript
