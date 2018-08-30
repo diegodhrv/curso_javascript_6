@@ -1,9 +1,9 @@
 ## Curso de Javascrip 6
 
-1. **Fundamentos**
-2. **Estrutura de controle**
-3. **Função**
->4. **Objeto**
+### 1. **Fundamentos**
+### 2. **Estrutura de controle**
+### 3. **Função**
+### 4. **Objeto**
 
 * **Objetos Constates:**
 
