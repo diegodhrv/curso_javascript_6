@@ -5,7 +5,7 @@
 ### 3. **Função**
 ### 4. **Objeto**
 
-* **Objetos Constates:**
+**Objetos Constates:**
 
 Congelar o objeto:
 ```javascript
@@ -17,7 +17,7 @@ console.log(pessoa)
 // pessoa -> 456 -> {...}
 // pessoa = { nome: 'Ana' }
 
-Object.freeze(pessoa)
+Object.freeze(pessoa) //Os atributos do objeto não podrão ser alterados apartir desse momento
 
 pessoa.nome = 'Maria'
 pessoa.end = 'Rua ABC'
