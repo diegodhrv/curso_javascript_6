@@ -26,10 +26,14 @@ delete pessoa.nome
 console.log(pessoa.nome)
 console.log(pessoa)
 
-const pessoaConstante = Object.freeze({ nome: 'Joao' })
+const pessoaConstante = Object.freeze({ nome: 'Joao' }) //Cria o objeto para nunca ser alterado
 pessoaConstante.nome = 'Maria'
 console.log(pessoaConstante)
 
 ```
+
+**Notação Literal (criando atributos no objeto):**
+
+
 
 5. **Array**
