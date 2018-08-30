@@ -99,9 +99,9 @@ const pessoa = {
     peso: 13
 }
 
-console.log(Object.keys(pessoa))
-console.log(Object.values(pessoa))
-console.log(Object.entries(pessoa))
+console.log(Object.keys(pessoa))//Retorna todas as chaves do objeto
+console.log(Object.values(pessoa))//Retorna todos os valores 
+console.log(Object.entries(pessoa))//Retorna um array com todas as chaves valor do objeto
 
 Object.entries(pessoa).forEach(([chave, valor]) => {
     console.log(`${chave}: ${valor}`)
