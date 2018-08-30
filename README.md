@@ -89,7 +89,7 @@ console.log(sequencia.valor, sequencia.valor)
 ```
 
 ### **Funções Importantes de Objeto**
->
+>Funções para listar, encapsular e atribuir
 
 ````javascript
 
@@ -108,10 +108,10 @@ Object.entries(pessoa).forEach(([chave, valor]) => {
 })
 
 Object.defineProperty(pessoa, 'dataNascimento', {
-    enumerable: true,
-    writable: false,
-    value: '01/01/2019'
-})
+    enumerable: true, //Permite listar a propriedade
+    writable: false, //Não permite alteração do valor da propriedade, não permite modificação
+    value: '01/01/2019' //O valor da propriedade
+})// Cria uma propriedade dentro de um objeto com caracteristar definidas
 
 pessoa.dataNascimento = '01/01/2017'
 console.log(pessoa.dataNascimento)
@@ -121,7 +121,7 @@ console.log(Object.keys(pessoa))
 const dest = { a: 1 }
 const o1 = { b: 2 }
 const o2 = { c: 3, a: 4 }
-const obj = Object.assign(dest, o1, o2)
+const obj = Object.assign(dest, o1, o2)//Vai atibuir os atributos de outro objeto para o objeto destino
 
 Object.freeze(obj)
 obj.c = 1234
