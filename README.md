@@ -1,4 +1,4 @@
-## Curso de Javascrip 6
+# Curso de Javascrip 6
 
 ### 1. **Fundamentos**
 ### 2. **Estrutura de controle**
