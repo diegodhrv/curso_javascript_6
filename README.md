@@ -3,9 +3,9 @@
 1. **Fundamentos**
 2. **Estrutura de controle**
 3. **Função**
-4. **Objeto**
+>4. **Objeto**
 
->**Objetos Constates:**
+* **Objetos Constates:**
 
 Congelar o objeto:
 ```javascript
