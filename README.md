@@ -67,6 +67,25 @@ console.log(obj5)
 
 ```
 
+**Getters e Setters**
+>Encapsulamento
 
+```javascript
+const sequencia = {
+    _valor: 1, // convenção
+    get valor() { return this._valor++ },
+    set valor(valor) { 
+        if(valor > this._valor) {
+            this._valor = valor
+        }
+    }
+}
+
+console.log(sequencia.valor, sequencia.valor)//O javascript entende que vc está tentando ler entao chama a função get valor()
+sequencia.valor = 1000 //O javascript entende que vc está tentando gravar entao chama a função set valor()
+console.log(sequencia.valor, sequencia.valor)
+sequencia.valor = 900
+console.log(sequencia.valor, sequencia.valor)
+```
 
 ### 5. **Array**
