@@ -31,7 +31,7 @@ const p2 = new Produto('Notebook', 2998.99, 0.25)
 console.log(p1.getPrecoComDesconto(), p2.getPrecoComDesconto())
 
 // Função Factory
-function criarFuncionario(nome, salarioBase, faltas) {
+function criarFuncionario(nome, salarioBase, faltas) { // É uma função que fabrica uma objeto
     return {
         nome,
         salarioBase,
