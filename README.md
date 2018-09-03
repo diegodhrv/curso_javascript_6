@@ -213,7 +213,7 @@ console.log(Object.prototype, MeuObjeto.prototype)
 Object.prototype.attr0 = '0' // não faça isso em casa!
 
 const avo = { attr1: 'A' }
-const pai = { __proto__: avo, attr2: 'B', attr3: '3' }
+const pai = { __proto__: avo, attr2: 'B', attr3: '3' }// O atributo __proto__ recebe o nome do obejto que irá herdar
 const filho = { __proto__: pai, attr3: 'C' }
 console.log(filho.attr0, filho.attr1, filho.attr2, filho.attr3)
 
@@ -240,11 +240,11 @@ const ferrari = {
 const volvo = {
     modelo: 'V40',
     status() {
-        return `${this.modelo}: ${super.status()}`
+        return `${this.modelo}: ${super.status()}` // Usa-se o super para chmar um metodo ou atributo do elemento pai
     }
 }
 
-Object.setPrototypeOf(ferrari, carro)
+Object.setPrototypeOf(ferrari, carro)// Outra forna de criar herança. ferrari herda carro.
 Object.setPrototypeOf(volvo, carro)
 
 console.log(ferrari)
