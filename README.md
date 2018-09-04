@@ -391,4 +391,16 @@ console.log(pessoa)
 // Object.freeze = selado + valores constantes
 ````
 
+### **JSON vc Object**
+>JSON é apenas texto, carrega apenas dados e não funcionalidades
+````javascript
+const obj = { a: 1, b: 2, c: 3, soma() { return a + b + c } }
+console.log(JSON.stringify(obj))//Converte objeto javascript para JSON
+
+// console.log(JSON.parse("{ a: 1, b: 2, c: 3 }"))
+// console.log(JSON.parse("{ 'a': 1, 'b': 2, 'c': 3 }"))
+console.log(JSON.parse('{ "a": 1, "b": 2, "c": 3 }'))
+console.log(JSON.parse('{ "a": 1.7, "b": "string", "c": true, "d": {}, "e": [] }'))
+````
+
 ## 5. **Array**
