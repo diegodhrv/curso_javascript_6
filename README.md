@@ -282,7 +282,7 @@ for(let key in filha2) {
 }
 ````
 
->Quarta explicação, usando o Object.create()
+>Quarta explicação, usando o Object.prototype
 ````javascript
 function MeuObjeto() {}
 console.log(MeuObjeto.prototype)
@@ -312,6 +312,56 @@ console.log((new MeuObjeto).__proto__ === MeuObjeto.prototype)
 console.log(MeuObjeto.__proto__ === Function.prototype)
 console.log(Function.prototype.__proto__ === Object.prototype)
 console.log(Object.prototype.__proto__ === null)
+````
+
+>Quinta explicação, alterando o prototype padraão
+````javascript
+console.log(typeof String)
+console.log(typeof Array)
+console.log(typeof Object)
+
+String.prototype.reverse = function () {
+    return this.split('').reverse().join('')
+}
+
+console.log('Escola Cod3r'.reverse())
+
+Array.prototype.first = function() {
+    return this[0]
+}
+
+console.log([1, 2, 3, 4, 5].first())
+console.log(['a', 'b', 'c'].first())
+
+String.prototype.toString = function () {
+    return 'Lascou tudo'
+}
+
+console.log('Escola Cod3r'.reverse())
+````
+
+>Sexta explicação, criando o operador new
+````javascript
+function Aula(nome, videoID) {
+    this.nome = nome
+    this.videoID = videoID
+}
+
+const aula1 = new Aula('Bem Vindo', 123)
+const aula2 = new Aula('Até Breve', 456)
+console.log(aula1, aula2)
+
+// simulando o new
+function novo(f, ...params) {
+    const obj = {}
+    obj.__proto__ = f.prototype
+    f.apply(obj, params)
+    return obj
+}
+
+const aula3 = novo(Aula, 'Bem Vindo', 123)
+const aula4 = novo(Aula, 'Até Breve', 456)
+console.log(aula3, aula4)
 ````
 
 ## 5. **Array**
