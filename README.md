@@ -62,7 +62,7 @@ console.log(fromJSON.info)
 
 ````
 
-### **Objetos Constates:**
+### **Objetos Constantes:**
 
 >Congelar o objeto para que não possa ser alterados seus valores de atributo
 ```javascript
