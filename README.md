@@ -3,6 +3,7 @@
 ## [1. **Fundamentos**](https://goo.gl/ac3FNV)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
+- [**Objetos Constatntes**](#objetos-constantes)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
