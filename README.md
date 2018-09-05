@@ -91,6 +91,7 @@ pessoaConstante.nome = 'Maria'
 console.log(pessoaConstante)
 
 ```
+[Topo](#curso-de-javascript-6)
 
 ### **Notação Literal (criando atributos no objeto):**
 
@@ -126,6 +127,7 @@ const obj5 = {
 console.log(obj5)
 
 ```
+[Topo](#curso-de-javascript-6)
 
 ### **Getters e Setters**
 >Encapsulamento
@@ -147,6 +149,7 @@ console.log(sequencia.valor, sequencia.valor)
 sequencia.valor = 900
 console.log(sequencia.valor, sequencia.valor)
 ```
+[Topo](#curso-de-javascript-6)
 
 ### **Funções Importantes de Objeto**
 >Funções para listar, encapsular e atribuir
@@ -188,6 +191,7 @@ obj.c = 1234
 console.log(obj)
 
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **Herança**
 >Primeira explicação
@@ -214,6 +218,7 @@ console.log(typeof Object, typeof MeuObjeto)
 console.log(Object.prototype, MeuObjeto.prototype)
 
 ````
+[Topo](#curso-de-javascript-6)
 
 >Segunda explicação, criando herança de fato
 ````javascript
@@ -264,6 +269,7 @@ console.log(volvo.status())
 ferrari.acelerarMais(300)
 console.log(ferrari.status())
 ````
+[Topo](#curso-de-javascript-6)
 
 >Terceira explicação, usando o Object.create()
 ````javascript
@@ -289,6 +295,7 @@ for(let key in filha2) {
         console.log(key) : console.log(`Por herança: ${key}`)
 }
 ````
+[Topo](#curso-de-javascript-6)
 
 >Quarta explicação, usando o Object.prototype
 ````javascript
@@ -321,6 +328,7 @@ console.log(MeuObjeto.__proto__ === Function.prototype)
 console.log(Function.prototype.__proto__ === Object.prototype)
 console.log(Object.prototype.__proto__ === null)
 ````
+[Topo](#curso-de-javascript-6)
 
 >Quinta explicação, alterando o prototype padraão
 ````javascript
@@ -347,6 +355,7 @@ String.prototype.toString = function () {
 
 console.log('Escola Cod3r'.reverse())
 ````
+[Topo](#curso-de-javascript-6)
 
 >Sexta explicação, criando o operador new
 ````javascript
@@ -371,6 +380,7 @@ const aula3 = novo(Aula, 'Bem Vindo', 123)
 const aula4 = novo(Aula, 'Até Breve', 456)
 console.log(aula3, aula4)
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **Evitando Modificações**
 >Evitando que adicionem novos atributos ao seu objeto
@@ -398,6 +408,7 @@ console.log(pessoa)
 
 // Object.freeze = selado + valores constantes
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **JSON vc Object**
 >JSON é apenas texto, carrega apenas dados e não funcionalidades
@@ -410,6 +421,7 @@ console.log(JSON.stringify(obj))//Converte objeto javascript para JSON
 console.log(JSON.parse('{ "a": 1, "b": 2, "c": 3 }'))
 console.log(JSON.parse('{ "a": 1.7, "b": "string", "c": true, "d": {}, "e": [] }'))
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **Classe**
 >As classes criadas em javascript será transformada em função
@@ -448,6 +460,8 @@ const contas = new CicloFinanceiro(6, 2018)
 contas.addLancamentos(salario, contaDeLuz)
 console.log(contas.sumario())
 ````
+[Topo](#curso-de-javascript-6)
+
 >Herança em classes
 ````javascript
 class Avo {
@@ -472,6 +486,7 @@ class Filho extends Pai {
 const filho = new Filho
 console.log(filho)
 ````
+[Topo](#curso-de-javascript-6)
 
 ## 5. **Array**
 
@@ -510,6 +525,7 @@ aprovados = ['Bia', 'Carlos', 'Ana']
 aprovados.splice(1, 1)
 console.log(aprovados)
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **Métodos Importantes**
 >
@@ -544,6 +560,7 @@ console.log(algunsPilotos1)
 const algunsPilotos2 = pilotos.slice(1, 4)
 console.log(algunsPilotos2)
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **Simulando Array com Objeto**
 >
@@ -561,6 +578,7 @@ console.log(quaseArray[0])
 const meuArray = ['Rafael', 'Ana', 'Bia']
 console.log(quaseArray.toString(), meuArray)
 ````
+[Topo](#curso-de-javascript-6)
 
 ### **Foreach**
 >Percorrer um Array
@@ -577,6 +595,8 @@ aprovados.forEach(nome => console.log(nome))
 const exibirAprovados = aprovado => console.log(aprovado)
 aprovados.forEach(exibirAprovados)
 ````
+[Topo](#curso-de-javascript-6)
+
 >Emplementando um forEach
 
 ````javascript
@@ -592,3 +612,4 @@ aprovados.forEach2(function(nome, indice) {
     console.log(`${indice + 1}) ${nome}`)
 })
 ````
+[Topo](#curso-de-javascript-6)
