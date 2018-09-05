@@ -1,4 +1,4 @@
-# Curso de Javascrip 6
+# Curso de Javascript 6
 
 ## [1. **Fundamentos**](https://goo.gl/ac3FNV)
 ## [4. **Objetos**](#4-objeto)
