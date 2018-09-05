@@ -63,7 +63,7 @@ const fromJSON = JSON.parse('{"info": "Sou um JSON"}')
 console.log(fromJSON.info)
 
 ````
-[Sumario](#curso-de-javascript-6)
+[Home](#curso-de-javascript-6)
 
 ### **Objetos Constantes:**
 
