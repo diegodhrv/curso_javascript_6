@@ -1,5 +1,7 @@
 # Curso de Javascrip 6
 
+## [1. **Fundamentos**](https://goo.gl/ac3FNV)
+
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
 ## 3. **Função**
