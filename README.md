@@ -1,7 +1,7 @@
 # Curso de Javascrip 6
 
 ## [1. **Fundamentos**](https://goo.gl/ac3FNV)
-## [4. **Objetos**](#objeto)
+## [4. **Objetos**](#4-objeto)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
