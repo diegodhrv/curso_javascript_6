@@ -4,6 +4,7 @@
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
+- [**Notação Literal (criando atributos no objeto)**](#)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
