@@ -468,7 +468,7 @@ console.log(filho)
 ## 5. **Array**
 
 ### **Visão Geral**
->O array em javascript é um objeto. Não exite um tipo nativo do tipo array.
+>O array em javascript é um objeto. Não existe um tipo nativo do tipo array.
 
 ````javascript
 console.log(typeof Array, typeof new Array, typeof [])
@@ -552,4 +552,35 @@ console.log(quaseArray[0])
 
 const meuArray = ['Rafael', 'Ana', 'Bia']
 console.log(quaseArray.toString(), meuArray)
+````
+
+### **Foreach**
+>Percorrer um Array
+
+````javascript
+const aprovados = ['Agatha', 'Aldo', 'Daniel', 'Raquel']
+
+aprovados.forEach(function(nome, indice) {
+    console.log(`${indice + 1}) ${nome}`)
+})
+
+aprovados.forEach(nome => console.log(nome))
+
+const exibirAprovados = aprovado => console.log(aprovado)
+aprovados.forEach(exibirAprovados)
+````
+>Emplementando um forEach
+
+````javascript
+Array.prototype.forEach2 = function(callback) {
+    for (let i = 0; i < this.length; i++) {
+        callback(this[i], i, this)
+    }
+}
+
+const aprovados = ['Agatha', 'Aldo', 'Daniel', 'Raquel']
+
+aprovados.forEach2(function(nome, indice) {
+    console.log(`${indice + 1}) ${nome}`)
+})
 ````
