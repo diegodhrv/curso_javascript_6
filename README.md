@@ -9,6 +9,8 @@
 - [**Funções Importantes de Objeto**](#funções-importantes-de-objeto)
 - [**Herança**](#herança)
 - [**Evitando Modificações**](#evitando-modificações)
+- [**Json vs Objeto**](#json-vs-objeto)
+- [**Classe**](#classe)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
