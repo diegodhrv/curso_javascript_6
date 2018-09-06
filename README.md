@@ -11,6 +11,7 @@
 - [**Evitando Modificações**](#evitando-modificações)
 - [**Json vs Objeto**](#json-vs-objeto)
 - [**Classe**](#classe)
+## [5. **Array**](#5-array)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
