@@ -8,6 +8,7 @@
 - [**Getters e Setters**](#getters-e-setters)
 - [**Funções Importantes de Objeto**](#funções-importantes-de-objeto)
 - [**Herança**](#herança)
+- [**Evitando Modificações**](#evitando-modificações)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
