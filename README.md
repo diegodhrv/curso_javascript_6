@@ -6,6 +6,7 @@
 - [**Objetos Constatntes**](#objetos-constantes)
 - [**Notação Literal (criando atributos no objeto)**](#notação-literal-criando-atributos-no-objeto)
 - [**Getters e Setters**](#getters-e-setters)
+- [**Funções Importantes de Objeto**](#funções-importantes-de-objeto)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
