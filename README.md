@@ -13,7 +13,9 @@
 - [**Classe**](#classe)
 ## [5. **Array**](#5-array-1)
 - [**Visão Geral**](#visão-geral)
-- [**Métodos Importantes**](#metodos-importantes)
+- [**Métodos Importantes**](#métodos-importantes)
+- [**Simulando Array com Objeto**](#simulando-array-com-objeto)
+- [**Foreach**](#foreach)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
