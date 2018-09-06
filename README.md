@@ -625,13 +625,14 @@ aprovados.forEach2(function(nome, indice) {
 [Topo](#curso-de-javascript-6)
 
 ### **Map**
->Primeira explicação. 
-`````javascript
+>Primeira explicação. O map retorna um outro Array com os dados transformados basedo no array original.
+
+````javascript
 const nums = [1, 2, 3, 4, 5]
 
 // For com propósito
-let resultado = nums.map(function(e) {
-    return e * 2
+let resultado = nums.map(function(e) { //A função callBack pode receber tres parametros: o valor do elemento, indice e o Array completo
+    return e * 2                       //Lembrando que a função callBack deve ter um retorno
 })
 
 console.log(resultado)
@@ -643,3 +644,50 @@ const paraDinheiro = e => `R$ ${parseFloat(e).toFixed(2).replace('.', ',')}`
 resultado = nums.map(soma10).map(triplo).map(paraDinheiro)
 console.log(resultado)
 ````
+[Topo](#curso-de-javascript-6)
+
+>Segunda explicação.
+````javascript
+const carrinho = [
+    '{ "nome": "Borracha", "preco": 3.45 }',
+    '{ "nome": "Caderno", "preco": 13.90 }',
+    '{ "nome": "Kit de Lapis", "preco": 41.22 }',
+    '{ "nome": "Caneta", "preco": 7.50 }'
+]
+
+// Retornar um array apenas com os preços
+
+const paraObjeto = json => JSON.parse(json)
+const apenasPreco = produto => produto.preco
+
+const resultado = carrinho.map(paraObjeto).map(apenasPreco)
+console.log(resultado)
+````
+[Topo](#curso-de-javascript-6)
+
+>Terceira explicação. Implementando um map
+````javascript
+Array.prototype.map2 = function(callback) {
+    const newArray = []
+    for (let i = 0; i < this.length; i++) {
+        newArray.push(callback(this[i], i, this))
+    }
+    return newArray
+}
+
+const carrinho = [
+    '{ "nome": "Borracha", "preco": 3.45 }',
+    '{ "nome": "Caderno", "preco": 13.90 }',
+    '{ "nome": "Kit de Lapis", "preco": 41.22 }',
+    '{ "nome": "Caneta", "preco": 7.50 }'
+]
+
+// Retornar um array apenas com os preços
+
+const paraObjeto = json => JSON.parse(json)
+const apenasPreco = produto => produto.preco
+
+const resultado = carrinho.map2(paraObjeto).map2(apenasPreco)
+console.log(resultado)
+````
+[Topo](#curso-de-javascript-6)
