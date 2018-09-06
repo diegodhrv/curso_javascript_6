@@ -13,6 +13,7 @@
 - [**Classe**](#classe)
 ## [5. **Array**](#5-array-1)
 - [**Visão Geral**](#visão-geral)
+- [**Métodos Importantes**](#metodos-importantes)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
