@@ -415,7 +415,7 @@ console.log(pessoa)
 ````
 [Topo](#curso-de-javascript-6)
 
-### **JSON vc Object**
+### **JSON vs Objeto**
 >JSON é apenas texto, carrega apenas dados e não funcionalidades
 ````javascript
 const obj = { a: 1, b: 2, c: 3, soma() { return a + b + c } }
