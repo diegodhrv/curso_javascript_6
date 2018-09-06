@@ -7,6 +7,7 @@
 - [**Notação Literal (criando atributos no objeto)**](#notação-literal-criando-atributos-no-objeto)
 - [**Getters e Setters**](#getters-e-setters)
 - [**Funções Importantes de Objeto**](#funções-importantes-de-objeto)
+- [**Herança**](#herança)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
