@@ -19,6 +19,7 @@
 - [**Map**](#map)
 - [**Filter**](#filter)
 - [**Reduce**](#reduce)
+- [**Concat**](#concat)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
@@ -796,5 +797,59 @@ Array.prototype.reduce2 = function(callback, valorInicial) {
 const soma = (total, valor) => total + valor
 const nums = [1, 2, 3, 4, 5, 6]
 console.log(nums.reduce2(soma, 21))
+````
+[Topo](#curso-de-javascript-6)
+
+### **Concat**
+>Concatenar um array em um unico array.
+
+````javascript
+const filhas = ['Ualeskah', 'Cibalena']
+const filhos = ['Uoxiton', 'Uesclei']
+const todos = filhas.concat(filhos)
+console.log(todos, filhas, filhos)
+
+console.log([].concat([1, 2], [3, 4], 5, [[6, 7]]))
+````
+[Topo](#curso-de-javascript-6)
+
+### **FlatMap**
+>O flatMap não é uma API nativa do javascript
+
+````javascript
+const escola = [{
+    nome: 'Turma M1',
+    alunos: [{
+        nome: 'Gustavo',
+        nota: 8.1
+    }, {
+        nome: 'Ana',
+        nota: 9.3
+    }]
+}, {
+    nome: 'Turma M2',
+    alunos: [{
+        nome: 'Rebeca',
+        nota: 8.9
+    }, {
+        nome: 'Roberto',
+        nota: 7.3
+    }]
+}]
+
+const getNotaDoAluno = aluno => aluno.nota
+const getNotasDaTurma = turma => turma.alunos.map(getNotaDoAluno)
+
+const notas1 = escola.map(getNotasDaTurma)
+console.log(notas1)
+
+console.log([].concat([ 8.1, 9.3 ], [ 8.9, 7.3 ]))
+
+Array.prototype.flatMap = function(callback) {
+    return Array.prototype.concat.apply([], this.map(callback))
+}
+
+const notas2 = escola.flatMap(getNotasDaTurma)
+console.log(notas2)
 ````
 [Topo](#curso-de-javascript-6)
