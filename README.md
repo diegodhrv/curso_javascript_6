@@ -2,6 +2,7 @@
 
 ## [1. **Fundamentos**](#1-fundamentos-1)
 - [**O Básico de Var, Let e Const:**](#o-básico-de-var-let-e-const)
+- [**Tipagem Fraca:**](#tipagem-fraca)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -67,7 +68,7 @@ let pqp = false // Produto Químico Perigoso... kkk
 ```
 [Topo](#curso-de-javascript-6)
 
-### **Tipos em Javascript- Number:**
+### **Tipos em Javascript - Number:**
 
 >Função Number
 ```javascript
@@ -114,7 +115,7 @@ console.log(typeof Math)
 ```
 [Topo](#curso-de-javascript-6)
 
-### **Tipos em Javascript- String:**
+### **Tipos em Javascript - String:**
 
 >String é uma cadeia de caracteres delimitada por aspas simples ou duplas 
 ```javascript
