@@ -9,6 +9,7 @@
 - [**Tipos em Javascript - Array**](#tipos-em-javascript---array)
 - [**Tipos em Javascript - Object**](#tipos-em-javascript---object)
 - [**Entendendo o Null & Undefined**](#entendendo-o-null--undefined)
+- [**Básico de Funções**](#básico-de-funções)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -289,6 +290,7 @@ console.log(soma(2, 3))
 console.log(soma(2))
 console.log(soma())
 ````
+[Topo](#curso-de-javascript-6)
 
 ## 2. **Estrutura de controle**
 ## 3. **Função**
