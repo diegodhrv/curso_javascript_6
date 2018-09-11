@@ -5,6 +5,7 @@
 - [**Tipagem Fraca**](#tipagem-fraca)
 - [**Tipos em Javascript - Number**](#tipos-em-javascript---number)
 - [**Tipos em Javascript - String**](#tipos-em-javascript---string)
+- [**Tipos em Javascript - Boolean**](#tipos-em-javascript---boolean)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -154,6 +155,44 @@ console.log(`1 + 1 = ${1 + 1}`)
 const up = texto => texto.toUpperCase()
 console.log(`Ei... ${up('cuidado')}!`)
 ````
+[Topo](#curso-de-javascript-6)
+
+### **Tipos em Javascript - Boolean:**
+>Tipos de Boolean em javascript. Todos os numeros são verdadeiros, menos o zero.  
+```javascript
+let isAtivo = false
+console.log(isAtivo)
+
+isAtivo = true
+console.log(isAtivo)
+
+isAtivo = 1//1 tbm é um boolean em javascript
+console.log(!!isAtivo)
+
+console.log('os verdadeiros...')
+console.log(!!3)
+console.log(!!-1)
+console.log(!!' ')
+console.log(!!'texto')
+console.log(!![])
+console.log(!!{})
+console.log(!!Infinity)
+console.log(!!(isAtivo = true))
+
+console.log('os falsos...')
+console.log(!!0)
+console.log(!!'')
+console.log(!!null)
+console.log(!!NaN)
+console.log(!!undefined)
+console.log(!!(isAtivo = false))
+
+console.log('pra finalizar...')
+console.log(!!('' || null || 0 || ' '))//Ele retorna o valor verdadeiro 
+
+let nome = 'Lucas'
+console.log(nome || 'Desconhecido')//Ele retorna o valor verdadeiro. Usar o operdaor OU para retornar um valor verdadeiro
+```
 [Topo](#curso-de-javascript-6)
 
 ## 2. **Estrutura de controle**
