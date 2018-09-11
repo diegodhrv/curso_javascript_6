@@ -1,6 +1,30 @@
 # Curso de Javascript 6
 
 ## [1. **Fundamentos**](#1-fundamentos-1)
+### **O Básico de Var, Let e Const:**
+
+>Dados e estrutura de dados
+```javascript
+var a = 3
+let b = 4
+
+var a = 30
+b = 40
+
+console.log(a, b)
+
+a = 300
+b = 400
+
+console.log(a, b)
+
+const c = 5
+// c = 50
+console.log(c)
+```
+[Topo](#curso-de-javascript-6)
+
+
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
