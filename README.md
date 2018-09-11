@@ -7,6 +7,7 @@
 - [**Tipos em Javascript - String**](#tipos-em-javascript---string)
 - [**Tipos em Javascript - Boolean**](#tipos-em-javascript---boolean)
 - [**Tipos em Javascript - Array**](#tipos-em-javascript---array)
+- [**Tipos em Javascript - Object**](#tipos-em-javascript---object)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -197,7 +198,7 @@ console.log(nome || 'Desconhecido')//Ele retorna o valor verdadeiro. Usar o oper
 [Topo](#curso-de-javascript-6)
 
 ### **Tipos em Javascript - Array:**
->Array em javascript 
+>Array em javascript. Todo Array em javascript é um objeto 
 ```javascript
 const valores = [7.7, 8.9, 6.3, 9.2]
 console.log(valores[0], valores[3])
@@ -215,6 +216,53 @@ delete valores[0]
 console.log(valores)
 
 console.log(typeof valores)
+```
+[Topo](#curso-de-javascript-6)
+
+### **Tipos em Javascript - Object:**
+> 
+```javascript
+const prod1 = {}
+prod1.nome = 'Celular Ultra Mega'
+prod1.preco = 4998.90
+prod1['Desconto Legal'] = 0.40 // evitar atributos com espaço
+
+console.log(prod1)
+
+const prod2 = {
+    nome: 'Camisa Polo',
+    preco: 79.90
+}
+
+console.log(prod2)
+```
+[Topo](#curso-de-javascript-6)
+
+### **Entendendo o Null & Undefined**
+> 
+```javascript
+let valor // não inicializada
+console.log(valor)
+
+valor = null // ausência de valor
+console.log(valor)
+// console.log(valor.toString()) // Erro!
+
+const produto = {}
+console.log(produto.preco)
+console.log(produto)
+
+produto.preco = 3.50
+console.log(produto)
+
+produto.preco = undefined // evite atribuir undefined
+console.log(!!produto.preco)
+// delete produto.preco
+console.log(produto)
+
+produto.preco = null // sem preço
+console.log(!!produto.preco)
+console.log(produto)
 ```
 [Topo](#curso-de-javascript-6)
 
