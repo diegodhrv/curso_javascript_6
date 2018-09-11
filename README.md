@@ -20,6 +20,7 @@
 - [**Filter**](#filter)
 - [**Reduce**](#reduce)
 - [**Concat**](#concat)
+- [**FlatMap**](#flatmap)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
