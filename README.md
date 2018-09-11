@@ -240,7 +240,7 @@ console.log(prod2)
 [Topo](#curso-de-javascript-6)
 
 ### **Entendendo o Null & Undefined**
->Undefined é quando a variavel é declarada, mas não é inicializada. Null é quando a variavel não tem nenhuma referencia, não aponta pra nenhum endereço de memória, então a variavel referencia é definida com o valor null, neste caso. Lembrando que Null é um valor.
+>Undefined é quando a variavel é declarada, mas não é inicializada. Null é quando a variavel não tem nenhuma referencia, não aponta pra nenhum endereço de memória, então a variavel referencia é definida com o valor null, neste caso. Ou se não tem nenhum valor primitivo atribuida a ela, mas sim null, lembrando que Null é um valor.
 ```javascript
 let valor // não inicializada
 console.log(valor)
@@ -266,6 +266,29 @@ console.log(!!produto.preco)
 console.log(produto)
 ```
 [Topo](#curso-de-javascript-6)
+
+### **Básico de funções**
+>
+````javascript
+// Funcao sem retorno
+function imprimirSoma(a, b) {
+    console.log(a + b)
+}
+
+imprimirSoma(2, 3)
+imprimirSoma(2)
+imprimirSoma(2, 10, 4, 5, 6, 7, 8)
+imprimirSoma()
+
+// Funcao com retorno
+function soma(a, b = 1) {//O parametro b recebe um 1 como valor padrao se nada for passado a ele
+    return a + b
+}
+
+console.log(soma(2, 3))
+console.log(soma(2))
+console.log(soma())
+````
 
 ## 2. **Estrutura de controle**
 ## 3. **Função**
