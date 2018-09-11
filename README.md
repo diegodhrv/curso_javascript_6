@@ -17,6 +17,8 @@
 - [**Simulando Array com Objeto**](#simulando-array-com-objeto)
 - [**Foreach**](#foreach)
 - [**Map**](#map)
+- [**Filter**](#filter)
+- [**Reduce**](#reduce)
 
 ## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
