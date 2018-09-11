@@ -1,6 +1,6 @@
 # Curso de Javascript 6
 
-## [1. **Fundamentos**](https://goo.gl/ac3FNV)
+## [1. **Fundamentos**](#1-fundamentos-1)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
