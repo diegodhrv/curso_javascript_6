@@ -739,3 +739,60 @@ const fragil = produto => produto.fragil
 console.log(produtos.filter2(caro).filter2(fragil))
 ````
 [Topo](#curso-de-javascript-6)
+
+### **Reduce**
+>Primeira explicação.Ele percorre um arrei acumulando valores e retorna o resultado dos valores acumulados. Agrega valores
+````javascript
+const alunos = [
+    { nome: 'João', nota: 7.3, bolsista: false },
+    { nome: 'Maria', nota: 9.2, bolsista: true },
+    { nome: 'Pedro', nota: 9.8, bolsista: false },
+    { nome: 'Ana', nota: 8.7, bolsista: true }
+]
+
+console.log(alunos.map(a => a.nota))
+const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual) {
+    console.log(acumulador, atual)
+    return acumulador + atual
+}, 0)// Se não quiser que o aculador nao inicie com nenhum valor, deixe o segundo parametro com o valor 0.
+
+console.log(resultado)
+````
+[Topo](#curso-de-javascript-6)
+
+>Segunda explicação.
+````javascript
+const alunos = [
+    { nome: 'João', nota: 7.3, bolsista: false },
+    { nome: 'Maria', nota: 9.2, bolsista: true },
+    { nome: 'Pedro', nota: 9.8, bolsista: false },
+    { nome: 'Ana', nota: 8.7, bolsista: true }
+]
+
+// Desafio 1: Todos os alunos são bolsista?
+const todosBolsistas = (resultado, bolsista) => resultado && bolsista
+console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas))
+
+// Desafio 2: Algum aluno é bolsista?
+const algumBolsista = (resultado, bolsista) => resultado || bolsista
+console.log(alunos.map(a => a.bolsista).reduce(algumBolsista))
+
+````
+[Topo](#curso-de-javascript-6)
+
+>Terceira explicação. Implementando Reduce
+````javascript
+Array.prototype.reduce2 = function(callback, valorInicial) {
+    const indiceInicial = valorInicial ? 0 : 1
+    let acumulador = valorInicial || this[0]
+    for (let i = indiceInicial; i < this.length; i++) {
+        acumulador = callback(acumulador, this[i], i, this)
+    }
+    return acumulador
+}
+
+const soma = (total, valor) => total + valor
+const nums = [1, 2, 3, 4, 5, 6]
+console.log(nums.reduce2(soma, 21))
+````
+[Topo](#curso-de-javascript-6)
