@@ -8,6 +8,7 @@
 - [**Tipos em Javascript - Boolean**](#tipos-em-javascript---boolean)
 - [**Tipos em Javascript - Array**](#tipos-em-javascript---array)
 - [**Tipos em Javascript - Object**](#tipos-em-javascript---object)
+- [**Entendendo o Null & Undefined**](#entendendo-o-null--undefined)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -239,7 +240,7 @@ console.log(prod2)
 [Topo](#curso-de-javascript-6)
 
 ### **Entendendo o Null & Undefined**
-> 
+>Undefined é quando a variavel é declarada, mas não é inicializada. Null é quando a variavel não tem nenhuma referencia, não aponta pra nenhum endereço de memória, então a variavel referencia é definida com o valor null, neste caso. Lembrando que Null é um valor.
 ```javascript
 let valor // não inicializada
 console.log(valor)
