@@ -27,12 +27,12 @@
 
 ### **O Básico de Var, Let e Const:**
 
->Dados e estrutura de dados
+>Dados e estrutura de dados. De forma geral, usar o Let para declarar variáveis
 ```javascript
 var a = 3
 let b = 4
 
-var a = 30
+var a = 30 //Var permite que a variavel seja redeclarada
 b = 40
 
 console.log(a, b)
@@ -46,6 +46,111 @@ const c = 5
 // c = 50
 console.log(c)
 ```
+[Topo](#curso-de-javascript-6)
+
+### **Tipagem Fraca:**
+
+>Uma linguagem de tipagem dinâmica
+```javascript
+let qualquer = 'Legal'
+console.log(qualquer)
+console.log(typeof qualquer)
+
+qualquer = 3.1516
+console.log(qualquer)
+console.log(typeof qualquer)
+
+// Evitar nome genéricos e siglas
+let valor = ''
+let numero = 1
+let pqp = false // Produto Químico Perigoso... kkk
+```
+[Topo](#curso-de-javascript-6)
+
+### **Tipos em Javascript- Number:**
+
+>Função Number
+```javascript
+const peso1 = 1.0
+const peso2 = Number('2.0')//Tenta converter para Number
+
+console.log(peso1, peso2)
+console.log(Number.isInteger(peso1))//Saber se é um valor inteiro
+console.log(Number.isInteger(peso2))
+
+const avaliacao1 = 9.871
+const avaliacao2 = 6.871
+
+const total = avaliacao1 * peso1 + avaliacao2 * peso2
+const media = total / (peso1 + peso2)
+
+console.log(media.toFixed(2))//Limitar a quantidade de casas decimais
+console.log(media.toString(2)) // em binário
+console.log(typeof media)
+console.log(typeof Number)
+```
+[Topo](#curso-de-javascript-6)
+
+>Number:Alguns Cuidados
+```javascript
+console.log(7 / 0)//Retorna Infinity
+console.log("10" / 2)//Retorna 5
+console.log('3' + 2) // string ganha!
+console.log('3' - 2)
+console.log("Show!" * 2)//Retorna NaN(Not a Number)
+console.log(0.1 + 0.7)
+// console.log(10.toString())
+console.log((10.345).toFixed(2))
+```
+[Topo](#curso-de-javascript-6)
+
+>Usando o Math
+```javascript
+const raio = 5.6
+const area = Math.PI * Math.pow(raio, 2)//Raio elevado ao quadrado
+
+console.log(area)
+console.log(typeof Math)
+```
+[Topo](#curso-de-javascript-6)
+
+### **Tipos em Javascript- String:**
+
+>String é uma cadeia de caracteres delimitada por aspas simples ou duplas 
+```javascript
+const escola = "Cod3r"
+
+console.log(escola.charAt(4))//Retorna a letra que está dentro do indice 4 da strintg
+console.log(escola.charAt(5))
+console.log(escola.charCodeAt(3))//Retorna o valor dele da tabela ASCII
+console.log(escola.indexOf('3'))
+
+console.log(escola.substring(1))//Retorna uma string a partir do indice 1
+console.log(escola.substring(0, 3))
+
+console.log('Escola '.concat(escola).concat("!"))
+console.log('Escola ' + escola + "!")
+console.log(escola.replace(3, 'e'))//O segundo parametro aceita expressão regular
+
+console.log('Ana,Maria,Pedro'.split(','))//Retorna um array quebrado por virgula 
+```
+[Topo](#curso-de-javascript-6)
+
+>Usando Template String
+````javascript
+const nome = 'Rebeca'
+const concatenacao = 'Olá ' + nome + '!'
+const template = `
+    Olá
+    ${nome}!`
+console.log(concatenacao, template)
+
+// expressoes...
+console.log(`1 + 1 = ${1 + 1}`)
+
+const up = texto => texto.toUpperCase()
+console.log(`Ei... ${up('cuidado')}!`)
+````
 [Topo](#curso-de-javascript-6)
 
 ## 2. **Estrutura de controle**
