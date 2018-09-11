@@ -1,8 +1,10 @@
 # Curso de Javascript 6
 
 ## [1. **Fundamentos**](#1-fundamentos-1)
-- [**O Básico de Var, Let e Const:**](#o-básico-de-var-let-e-const)
-- [**Tipagem Fraca:**](#tipagem-fraca)
+- [**O Básico de Var, Let e Const**](#o-básico-de-var-let-e-const)
+- [**Tipagem Fraca**](#tipagem-fraca)
+- [**Tipos em Javascript - Number**](#tipos-em-javascript---number)
+- [**Tipos em Javascript - String**](#tipos-em-javascript---string)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
