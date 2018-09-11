@@ -1,6 +1,29 @@
 # Curso de Javascript 6
 
 ## [1. **Fundamentos**](#1-fundamentos-1)
+## [4. **Objetos**](#4-objeto)
+- [**Criar Objetos**](#criar-objetos)
+- [**Objetos Constatntes**](#objetos-constantes)
+- [**Notação Literal (criando atributos no objeto)**](#notação-literal-criando-atributos-no-objeto)
+- [**Getters e Setters**](#getters-e-setters)
+- [**Funções Importantes de Objeto**](#funções-importantes-de-objeto)
+- [**Herança**](#herança)
+- [**Evitando Modificações**](#evitando-modificações)
+- [**Json vs Objeto**](#json-vs-objeto)
+- [**Classe**](#classe)
+## [5. **Array**](#5-array-1)
+- [**Visão Geral**](#visão-geral)
+- [**Métodos Importantes**](#métodos-importantes)
+- [**Simulando Array com Objeto**](#simulando-array-com-objeto)
+- [**Foreach**](#foreach)
+- [**Map**](#map)
+- [**Filter**](#filter)
+- [**Reduce**](#reduce)
+- [**Concat**](#concat)
+- [**FlatMap**](#flatmap)
+
+## 1. **Fundamentos**
+
 ### **O Básico de Var, Let e Const:**
 
 >Dados e estrutura de dados
@@ -24,29 +47,6 @@ console.log(c)
 ```
 [Topo](#curso-de-javascript-6)
 
-
-## [4. **Objetos**](#4-objeto)
-- [**Criar Objetos**](#criar-objetos)
-- [**Objetos Constatntes**](#objetos-constantes)
-- [**Notação Literal (criando atributos no objeto)**](#notação-literal-criando-atributos-no-objeto)
-- [**Getters e Setters**](#getters-e-setters)
-- [**Funções Importantes de Objeto**](#funções-importantes-de-objeto)
-- [**Herança**](#herança)
-- [**Evitando Modificações**](#evitando-modificações)
-- [**Json vs Objeto**](#json-vs-objeto)
-- [**Classe**](#classe)
-## [5. **Array**](#5-array-1)
-- [**Visão Geral**](#visão-geral)
-- [**Métodos Importantes**](#métodos-importantes)
-- [**Simulando Array com Objeto**](#simulando-array-com-objeto)
-- [**Foreach**](#foreach)
-- [**Map**](#map)
-- [**Filter**](#filter)
-- [**Reduce**](#reduce)
-- [**Concat**](#concat)
-- [**FlatMap**](#flatmap)
-
-## 1. **Fundamentos**
 ## 2. **Estrutura de controle**
 ## 3. **Função**
 ## 4. **Objeto**
