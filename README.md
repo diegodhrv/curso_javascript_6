@@ -6,6 +6,7 @@
 - [**Tipos em Javascript - Number**](#tipos-em-javascript---number)
 - [**Tipos em Javascript - String**](#tipos-em-javascript---string)
 - [**Tipos em Javascript - Boolean**](#tipos-em-javascript---boolean)
+- [**Tipos em Javascript - Array**](#tipos-em-javascript---array)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -192,6 +193,28 @@ console.log(!!('' || null || 0 || ' '))//Ele retorna o valor verdadeiro
 
 let nome = 'Lucas'
 console.log(nome || 'Desconhecido')//Ele retorna o valor verdadeiro. Usar o operdaor OU para retornar um valor verdadeiro
+```
+[Topo](#curso-de-javascript-6)
+
+### **Tipos em Javascript - Array:**
+>Array em javascript 
+```javascript
+const valores = [7.7, 8.9, 6.3, 9.2]
+console.log(valores[0], valores[3])
+console.log(valores[4])
+
+valores[4] = 10
+console.log(valores)
+console.log(valores.length)
+
+valores.push({id: 3}, false, null, 'teste')
+console.log(valores)
+
+console.log(valores.pop())
+delete valores[0]
+console.log(valores)
+
+console.log(typeof valores)
 ```
 [Topo](#curso-de-javascript-6)
 
