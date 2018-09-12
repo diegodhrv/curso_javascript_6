@@ -10,6 +10,7 @@
 - [**Tipos em Javascript - Object**](#tipos-em-javascript---object)
 - [**Entendendo o Null & Undefined**](#entendendo-o-null--undefined)
 - [**Básico de Funções**](#básico-de-funções)
+- [**Usando Var e Let**](#usando-var-e-let)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
