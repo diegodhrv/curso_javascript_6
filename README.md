@@ -11,6 +11,17 @@
 - [**Entendendo o Null & Undefined**](#entendendo-o-null--undefined)
 - [**Básico de Funções**](#básico-de-funções)
 - [**Usando Var e Let**](#usando-var-e-let)
+- [**Entendendo o Hoisting**](#entendendo-o-hoisting)
+- [**Função vs Objeto**](#função-vs-objeto)
+- [**Par Nome Valor**](#par-nome-valor)
+- [**Notação Ponto**](#notação-ponto)
+- [**Operadores - Atribuição**](#operadores-atribuição)
+- [**Operadores - Destructing**](#operadores-destructuring)
+- [**Operadores - Aritmeticos**](#operadores-aritmeticos)
+- [**Operadores - Relacionais**](#operadores-relacionais)
+- [**Operadores - Lógicos**](#operadores-lógicos)
+- [**Operadores - Unário**](#operadores-unário)
+- [**Operadores - Ternário**](#operadores-ternário)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -620,7 +631,7 @@ console.log(soma, subtracao, multiplicacao, -divisao, modulo)
 ````
 [Topo](#curso-de-javascript-6)
 
-## **Operadores: Aritmeticos**
+## **Operadores: Relacionais**
 >Verdadeiro ou Falso. Ele compara valor e tipo, pois alguns só compara valor e outros compara valor e tipo
 ````javascript
 console.log('01)', '1' == 1)
