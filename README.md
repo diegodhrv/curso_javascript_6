@@ -701,6 +701,36 @@ console.log(resultado(6.7))
 ````
 [Topo](#curso-de-javascript-6)
 
+## **Tratamento de Erro Try/Catch/Throw**
+>
+````javascript
+function tratarErroELancar(erro) {
+    // throw new Error('...')
+    // throw 10
+    // throw true
+    // throw 'mensagem'
+    throw {
+        nome: erro.name,
+        msg: erro.message,
+        date: new Date
+    }
+}
+
+function imprimirNomeGritado(obj) {
+    try {
+        console.log(obj.name.toUpperCase() + '!!!')
+    } catch (e) {
+        tratarErroELancar(e)
+    } finally {
+        console.log('final')
+    }
+}
+
+const obj = { nome: 'Roberto' }
+imprimirNomeGritado(obj)
+````
+[Topo](#curso-de-javascript-6)
+
 ## 2. **Estrutura de controle**
 ## 3. **Função**
 ## 4. **Objeto**
