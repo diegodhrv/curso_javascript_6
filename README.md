@@ -292,6 +292,130 @@ console.log(soma())
 ````
 [Topo](#curso-de-javascript-6)
 
+>Mais de funções. Atribuindo funções a uma variavel
+````javascript
+// Armazenando uma funcao em uma variavel
+const imprimirSoma = function (a, b) {
+    console.log(a + b)
+}
+
+imprimirSoma(2, 3)
+
+// Armazenando uma funcao arrow em uma variavel
+const soma = (a, b) => {
+    return a + b
+}
+
+console.log(soma(2, 3))
+
+// retorno implícito
+const subtracao = (a, b) => a - b
+console.log(subtracao(2, 3))
+
+const imprimir2 = a => console.log(a)
+imprimir2('Legal!!!')
+````
+[Topo](#curso-de-javascript-6)
+
+### **Usando Var e Let:**
+>Var tem escopo de função e não de bloco. Já o Let tem escopo de bloco por esse motivo é mais utilizada
+````javascript
+{ 
+    { 
+        { 
+            { 
+                var sera = 'Será???'
+                console.log(sera)
+            }
+        }
+    }
+}
+
+console.log(sera)
+
+function teste() {
+    var local = 123
+    console.log(local)
+}
+
+teste()
+console.log(local)
+````
+[Topo](#curso-de-javascript-6)
+
+>Como explicado, Var não tem escopo de bloco, mas sim escopo de função e global
+````javascript
+var numero = 1
+{
+    var numero = 2
+    console.log('dentro =', numero)
+}
+console.log('fora =', numero)
+````
+[Topo](#curso-de-javascript-6)
+
+>Let tem escopo global, escopo de função e escopo de bloco
+````javascript
+let numero = 1
+{
+    let numero = 2
+    console.log('dentro =', numero)
+}
+console.log('fora =', numero)
+````
+[Topo](#curso-de-javascript-6)
+
+>Usando Var em Loop. A variavel pode ser usada fora do Loop se ela for declarada com Var, pois Var não tem escopo de bloco
+````javascript
+for (var i = 0; i < 10; i++) {
+    console.log(i)
+}
+
+console.log('i =', i)
+````
+[Topo](#curso-de-javascript-6)
+
+>Usando Var em Loop.
+````javascript
+const funcs = []
+
+for (var i = 0; i < 10; i++) {
+    funcs.push(function() {
+        console.log(i)
+    })
+}
+
+funcs[2]()
+funcs[8]()
+````
+[Topo](#curso-de-javascript-6)
+
+>Usando Let em Loop. A variavel não estará visivel fora do bloco, pois Let tem escopo de bloco
+````javascript
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+}
+
+console.log('i =', i)
+````
+[Topo](#curso-de-javascript-6)
+
+>Usando Let em Loop.
+````javascript
+const funcs = []
+
+for (let i = 0; i < 10; i++) {
+    funcs.push(function() {
+        console.log(i)
+    })
+}
+
+funcs[2]()
+funcs[6]()
+funcs[8]()
+````
+[Topo](#curso-de-javascript-6)
+
 ## 2. **Estrutura de controle**
 ## 3. **Função**
 ## 4. **Objeto**
