@@ -22,6 +22,7 @@
 - [**Operadores - Lógicos**](#operadores-lógicos)
 - [**Operadores - Unário**](#operadores-unário)
 - [**Operadores - Ternário**](#operadores-ternário)
+- [**Tratamento de Erro Try/Catch/Throw**](#tratamento-de-erro-trycatchthrow)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
@@ -702,7 +703,7 @@ console.log(resultado(6.7))
 [Topo](#curso-de-javascript-6)
 
 ## **Tratamento de Erro Try/Catch/Throw**
->
+>Tratar exceções de erro lançadas pelas linhas de sentença
 ````javascript
 function tratarErroELancar(erro) {
     // throw new Error('...')
@@ -721,7 +722,7 @@ function imprimirNomeGritado(obj) {
         console.log(obj.name.toUpperCase() + '!!!')
     } catch (e) {
         tratarErroELancar(e)
-    } finally {
+    } finally {             //O finally é executado logo em seguida do Try ou do Catch
         console.log('final')
     }
 }
