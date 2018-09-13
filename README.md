@@ -23,6 +23,8 @@
 - [**Operadores - Unário**](#operadores-unário)
 - [**Operadores - Ternário**](#operadores-ternário)
 - [**Tratamento de Erro Try/Catch/Throw**](#tratamento-de-erro-trycatchthrow)
+## [3. **Função**](#3-função-1)
+- [**Cidadão de Primeira Linha**](#cidadão-de-primeira-linha)
 ## [2. **Estrutura de Controle**](#2-estrutura-de-controle-1)
 - [**Usando a estrutura IF**](#usando-a-estrutura-if)
 - [**Usando a estrutura IF/ELSE**](#usando-a-estrutura-ifelse)
@@ -987,6 +989,89 @@ for (a in nums) {
 [Topo](#curso-de-javascript-6)
 
 ## 3. **Função**
+
+### **Cidadão de Primeira Linha:**
+>As funções em javascript podem ser armazenadas em variaveis, passadas por parametro, criar função dentro de outra, criar função dentro de um array, criar função dentro de um objeto e retornar função
+````javascript
+// Função em JS é First-Class Object (Citizens)
+// Higher-order function
+
+// criar de forma literal
+function fun1() { }
+
+// Armazenar em uma variável. para invocar a função tem que ser com os parenteses, nome da variavel seguida de parenteses. S
+// Só não é necessario parenteses se ela for passada por parametro
+const fun2 = function () { }
+
+// Armazenar em um array
+const array = [function (a, b) { return a + b }, fun1, fun2]
+console.log(array[0](2, 3))
+
+// Armazenar em um atributo de objeto
+const obj = {}
+obj.falar = function () { return 'Opa' }
+console.log(obj.falar())
+
+// Passar função como param
+function run(fun) {
+    fun()
+}
+
+run(function () { console.log('Executando...') })
+
+// Um função pode retornar/conter um função
+function soma(a, b) {
+    return function (c) {
+        console.log(a + b + c)
+    }
+}
+
+soma(2, 3)(4)
+const cincoMais = soma(2, 3)
+cincoMais(4)
+````
+[Topo](#curso-de-javascript-6)
+
+### **Parâmetros e Retorno São Opcionais:**
+>
+````javascript
+function area(largura, altura) {
+    const area = largura * altura
+    if (area > 20) {
+        console.log(`Valor acima do permitido: ${area}m2.`)
+    } else {
+        return area
+    }
+}
+
+console.log(area(2, 2))
+console.log(area(2))
+console.log(area())
+console.log(area(2, 3, 17, 22, 44))
+console.log(area(5, 5))
+````
+[Topo](#curso-de-javascript-6)
+
+### **Parâmetros Variáveis:**
+>Arguments é um array interno de uma função que recebe todos os argumentos passados por parametro 
+````javascript
+function soma() {
+    let soma = 0
+    for (i in arguments) {
+        soma += arguments[i]
+    }
+    return soma
+}
+
+console.log(soma())
+console.log(soma(1))
+console.log(soma(1.1, 2.2, 3.3))
+
+console.log(soma(1.1, 2.2, "Teste"))
+console.log(soma('a', 'b', 'c'))
+````
+[Topo](#curso-de-javascript-6)
+
 ## 4. **Objeto**
 
 ### **Criar objetos:**
