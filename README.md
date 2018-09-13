@@ -915,25 +915,6 @@ console.log('Até a próxima!')
 ````
 [Topo](#curso-de-javascript-6)
 
-### **Usando a Estrutura DO/WHILE**
->
-````javascript
-function getInteiroAleatorioEntre(min, max) {
-    const valor = Math.random() * (max - min) + min
-    return Math.floor(valor)
-}
-
-let opcao = -1
-
-do {
-    opcao = getInteiroAleatorioEntre(-1, 10)
-    console.log(`Opção escolhida foi ${opcao}.`)
-} while (opcao != -1)
-
-console.log('Até a próxima!')
-````
-[Topo](#curso-de-javascript-6)
-
 ### **Usando a Estrutura FOR**
 >
 ````javascript
