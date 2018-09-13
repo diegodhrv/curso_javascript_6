@@ -23,7 +23,7 @@
 - [**Operadores - Unário**](#operadores-unário)
 - [**Operadores - Ternário**](#operadores-ternário)
 - [**Tratamento de Erro Try/Catch/Throw**](#tratamento-de-erro-trycatchthrow)
-## [2. **Estrutura de Controle**](#2-estrutura-de-controle)
+## [2. **Estrutura de Controle**](#2-estrutura-de-controle-1)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
