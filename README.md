@@ -1145,6 +1145,359 @@ new Pessoa
 ````
 [Topo](#curso-de-javascript-6)
 
+### **Funções Arrow:**
+>Primeira explicação. Função Arrow é sempre uma função anonima, se quiser utiliza-la tem que atribuir em uma variavel. E se tiver uma unica linha de sentença e não for usada as chaves o retorno é implicito
+````javascript
+let dobro = function (a) {
+    return 2 * a
+}
+
+dobro = (a) => {
+    return 2 * a 
+}
+
+dobro = a => 2 * a // return implícito
+console.log(dobro(Math.PI))
+
+let ola = function () {
+    return 'Olá'
+}
+
+ola = () => 'Olá'
+ola = _ => 'Olá' // possui um param
+console.log(ola())
+````
+[Topo](#curso-de-javascript-6)
+
+>Segunda explicação. Usando função arrow para sempre manter o contexto do this
+````javascript
+function Pessoa() {
+    this.idade = 0
+
+    setInterval(() => {
+        this.idade++
+        console.log(this.idade)
+    }, 1000)
+}
+
+new Pessoa
+````
+[Topo](#curso-de-javascript-6)
+
+>Terceira explicação. Usando arrow function o this aponta para o objeto no qual a função foi escrita. Então o correto, para evitar problemas é usar o this em arrow function. O this utilizado em uma arrow function não varia de forma alguma, ela sempre fira presa ao ontexto que foi escrita, ou seja, associada ao objeto que foi escrita.
+````javascript
+let comparaComThis = function (param) {
+    console.log(this === param)
+}
+
+comparaComThis(global)
+
+const obj = {}
+comparaComThis = comparaComThis.bind(obj)
+comparaComThis(global)
+comparaComThis(obj)
+
+let comparaComThisArrow = param => console.log(this === param)
+comparaComThisArrow(global)
+comparaComThisArrow(module.exports)
+
+comparaComThisArrow = comparaComThisArrow.bind(obj)
+comparaComThisArrow(obj)
+comparaComThisArrow(module.exports)
+````
+[Topo](#curso-de-javascript-6)
+
+### **Funções Anônimas:**
+>
+````javascript
+const soma = function (x, y) {
+    return x + y
+}
+
+const imprimirResultado = function (a, b, operacao = soma) {
+    console.log(operacao(a, b))
+}
+
+imprimirResultado(3, 4)
+imprimirResultado(3, 4, soma)
+imprimirResultado(3, 4, function (x, y) {
+    return x - y
+})
+imprimirResultado(3, 4, (x, y) => x * y)
+
+const pessoa = {
+    falar: function () {
+        console.log('Opa')
+    }
+}
+
+pessoa.falar()
+````
+[Topo](#curso-de-javascript-6)
+
+### **Funções Callback:**
+>Primeira explicação.
+````javascript
+const soma = function (x, y) {
+    return x + y
+}
+
+const imprimirResultado = function (a, b, operacao = soma) {
+    console.log(operacao(a, b))
+}
+
+imprimirResultado(3, 4)
+imprimirResultado(3, 4, soma)
+imprimirResultado(3, 4, function (x, y) {
+    return x - y
+})
+imprimirResultado(3, 4, (x, y) => x * y)
+
+const pessoa = {
+    falar: function () {
+        console.log('Opa')
+    }
+}
+
+pessoa.falar()
+````
+[Topo](#curso-de-javascript-6)
+
+>Segunda explicação.
+````javascript
+const notas = [7.7, 6.5, 5.2, 8.9, 3.6, 7.1, 9.0]
+
+// Sem callback
+const notasBaixas1 = []
+for (let i in notas) {
+    if (notas[i] < 7) {
+        notasBaixas1.push(notas[i])
+    }
+}
+
+console.log(notasBaixas1)
+
+// Com callback
+const notasBaixas2 = notas.filter(function (nota) {
+    return nota < 7
+})
+
+console.log(notasBaixas2)
+
+const notasMenorQue7 = nota => nota < 7
+const notasBaixas3 = notas.filter(notasMenorQue7)
+console.log(notasBaixas3)
+````
+[Topo](#curso-de-javascript-6)
+
+>Terceira explicação.
+````javascript
+document.getElementsByTagName('body')[0].onclick = function (e) {
+    console.log('O evento ocorreu!')
+}
+````
+[Topo](#curso-de-javascript-6)
+
+### **Funções Construtoras:**
+>
+````javascript
+function Carro(velocidadeMaxima = 200, delta = 5) {
+    // atributo privado
+    let velocidadeAtual = 0
+
+    // metodo publico
+    this.acelerar = function () {
+        if (velocidadeAtual + delta <= velocidadeMaxima) {
+            velocidadeAtual += delta
+        } else {
+            velocidadeAtual = velocidadeMaxima
+        }
+    }
+
+    // metodo publico
+    this.getVelocidadeAtual = function () {
+        return velocidadeAtual
+    }
+}
+
+const uno = new Carro
+uno.acelerar()
+console.log(uno.getVelocidadeAtual())
+
+const ferrari = new Carro(350, 20)
+ferrari.acelerar()
+ferrari.acelerar()
+ferrari.acelerar()
+console.log(ferrari.getVelocidadeAtual())
+
+console.log(typeof Carro)
+console.log(typeof ferrari)
+````
+[Topo](#curso-de-javascript-6)
+
+### **Tipos de Declaração:**
+>
+````javascript
+console.log(soma(3, 4))
+
+// function declaration
+function soma(x, y) {
+    return x + y
+}
+
+// function expression
+const sub = function (x, y) {
+    return x - y
+}
+console.log(sub(3, 4))
+
+// named function expression
+const mult = function mult(x, y) {
+    return x * y
+}
+console.log(mult(3, 4))
+````
+[Topo](#curso-de-javascript-6)
+
+### **Contexto Léxico:**
+>Ele vai usar a variavel do escopo em que a função foi criada 
+````javascript
+const valor = 'Global'
+
+function minhaFuncao() {
+    console.log(valor)
+}
+
+function exec() {
+    const valor = 'Local'
+    minhaFuncao()
+}
+
+exec()
+````
+[Topo](#curso-de-javascript-6)
+
+### **Closures:**
+>Ele vai usar a variavel do escopo em que a função foi criada 
+````javascript
+/ Closure é o escopo criado quando uma função é declarada
+// Esse escopo permite a função acessar e manipular variáveis externas à função
+
+// Contexto léxico em ação!
+
+const x = 'Global'
+
+function fora() {
+    const x = 'Local'
+    function dentro() {
+        return x
+    }
+    return dentro
+}
+
+const minhaFuncao = fora()
+console.log(minhaFuncao())
+````
+[Topo](#curso-de-javascript-6)
+
+### **Função Factory:**
+>Função factory é sempre uma função que cria e retorna um objeto
+````javascript
+// Factory simples
+function criarPessoa() {
+    return {
+        nome: 'Ana',
+        sobrenome: 'Silva'
+    }
+}
+
+console.log(criarPessoa())
+````
+[Topo](#curso-de-javascript-6)
+
+>
+````javascript
+function criarProduto(nome, preco) {
+    return {
+        nome,                  //A ausencia de nome dos atributos é pq o nome do atributo é o mesmo do parametro
+        preco,
+        desconto: 0.1
+    }
+}
+
+console.log(criarProduto('Notebook', 2199.49))
+console.log(criarProduto('iPad', 1199.49))
+````
+[Topo](#curso-de-javascript-6)
+
+### **Class vs Factory:**
+>
+````javascript
+class Pessoa {
+    constructor(nome) {
+        this.nome = nome
+    }
+
+    falar() {
+        console.log(`Meu nome é ${this.nome}`)
+    }
+}
+
+const p1 = new Pessoa('João')
+p1.falar()
+
+const criarPessoa = nome => {
+    return {
+        falar: () => console.log(`Meu nome é ${nome}`)
+    }
+}
+
+const p2 = criarPessoa('João')
+p2.falar()
+````
+[Topo](#curso-de-javascript-6)
+
+### **IIFE:**
+>Função auto envocada para fugir do escopo global
+````javascript
+// IIFE -> Immediately Invoked Function Expression
+
+(function() {
+    console.log('Será executado na hora!')
+    console.log('Foge do escopo mais abrangente!')
+})()
+````
+[Topo](#curso-de-javascript-6)
+
+### **Call e Apply:**
+>Defininindo contexto e passando parametros
+````javascript
+function getPreco(imposto = 0, moeda = 'R$') {
+    return `${moeda} ${this.preco * (1 - this.desc) * (1 + imposto)}`
+}
+
+const produto = {
+    nome: 'Notebook',
+    preco: 4589,
+    desc: 0.15,
+    getPreco
+}
+
+global.preco = 20
+global.desc = 0.1
+console.log(getPreco())
+console.log(produto.getPreco())
+
+const carro = { preco: 49990, desc: 0.20 }
+
+console.log(getPreco.call(carro))
+console.log(getPreco.apply(carro))
+
+console.log(getPreco.call(carro, 0.17, '$'))
+console.log(getPreco.apply(global, [0.17, '$']))
+````
+[Topo](#curso-de-javascript-6)
+
 
 ## 4. **Objeto**
 
