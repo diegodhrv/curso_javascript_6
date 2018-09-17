@@ -52,6 +52,7 @@
 - [**Class vs Factory:**](#class-vs-factory)
 - [**IIFE:**](#iife)
 - [**Call e Apply:**](#call-e-apply)
+- [**Tagged Template:**](#tagged-template)
 ## [4. **Objetos**](#4-objeto)
 - [**Criar Objetos**](#criar-objetos)
 - [**Objetos Constatntes**](#objetos-constantes)
