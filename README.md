@@ -1541,6 +1541,39 @@ console.log(getPreco.apply(global, [0.17, '$']))
 ````
 [Topo](#curso-de-javascript-6)
 
+### **Tagge Template:**
+>Ela passa uma template string como parametro para uma função separado em partes 
+````javascript
+// tagged templates - processa o template dentro de uma função
+function tag(partes, ...valores) {
+    console.log(partes)
+    console.log(valores)
+    return 'Outra string'
+}
+
+const aluno = 'Gui'
+const situacao = 'Aprovado'
+console.log(tag `${aluno} está ${situacao}.`)
+````
+[Topo](#curso-de-javascript-6)
+
+>
+````javascript
+function real(partes, ...valores) {
+    const resultado = []
+    valores.forEach((valor, indice) => {
+        valor = isNaN(valor) ? valor : `R$${valor.toFixed(2)}`
+        resultado.push(partes[indice], valor)
+    })
+    return resultado.join('')
+}
+
+const preco = 29.9
+const precoParcela = 11
+console.log(real `1x de ${preco} ou 3x de ${precoParcela}.`)
+````
+[Topo](#curso-de-javascript-6)
+
 
 ## 4. **Objeto**
 
