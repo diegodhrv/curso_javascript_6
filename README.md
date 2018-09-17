@@ -22,6 +22,7 @@
 - [**Operadores - Lógicos**](#operadores-lógicos)
 - [**Operadores - Unário**](#operadores-unário)
 - [**Operadores - Ternário**](#operadores-ternário)
+- [**Operador: Rest/Spread**](#operador-restspread)
 - [**Tratamento de Erro Try/Catch/Throw**](#tratamento-de-erro-trycatchthrow)
 ## [2. **Estrutura de Controle**](#2-estrutura-de-controle-1)
 - [**Usando a estrutura IF**](#usando-a-estrutura-if)
@@ -727,6 +728,32 @@ const resultado = nota => nota >= 7 ? 'Aprovado' : 'Reprovado'
 
 console.log(resultado(7.1))
 console.log(resultado(6.7))
+````
+[Topo](#curso-de-javascript-6)
+
+## **Operador: Rest/Spread**
+>
+````javascript
+// operador ... rest(juntar)/spread(espalhar)
+// usar rest com parâmetro de função
+
+// operador rest
+function total(...numeros) {
+    let total = 0
+    numeros.forEach(n => total += n)
+    return total
+}
+console.log(total(2, 3, 4, 5))
+
+// usar spread com objeto
+const funcionario = { nome: 'Maria', salario: 12348.99 }
+const clone = { ativo: true, ...funcionario }
+console.log(clone)
+
+// usar spread com array
+const grupoA = ['João', 'Pedro', 'Gloria']
+const grupoFinal = ['Maria', ...grupoA, 'Rafaela']
+console.log(grupoFinal)
 ````
 [Topo](#curso-de-javascript-6)
 
