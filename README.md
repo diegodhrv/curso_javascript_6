@@ -1542,7 +1542,7 @@ console.log(getPreco.apply(global, [0.17, '$']))
 ````
 [Topo](#curso-de-javascript-6)
 
-### **Tagge Template:**
+### **Tagged Template:**
 >Ela passa uma template string como parametro para uma função separado em partes 
 ````javascript
 // tagged templates - processa o template dentro de uma função
