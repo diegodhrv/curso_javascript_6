@@ -25,6 +25,7 @@
 - [**Tratamento de Erro Try/Catch/Throw**](#tratamento-de-erro-trycatchthrow)
 ## [3. **Função**](#3-função-1)
 - [**Cidadão de Primeira Linha**](#cidadão-de-primeira-linha)
+- [**Parâmetros e Retorno São Opcionais**](#parâmetros-e-retorno-são-opcionais)
 - [**Parâmetros Variáveis**](#parâmetros-varáveis)
 - [**Parâmetro Padrão**](#parâmetro-padrão)
 - [**"this" Pode Variar**](#this-pode-variar)
