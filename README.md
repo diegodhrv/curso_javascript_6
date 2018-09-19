@@ -33,6 +33,7 @@
 - [**Usando a estrutura DO/WHILE**](#usando-a-estrutura-dowhile)
 - [**Usando a estrutura FOR**](#usando-a-estrutura-for)
 - [**Usando a estrutura FOR/IN**](#usando-a-estrutura-forin)
+- [**Usando a estrutura FOR OF**](#usando-a-estrutura-for-of)
 - [**Usando a estrutura Break/Continue**](#usando-a-estrutura-breakcontinue)
 ## [3. **Função**](#3-função-1)
 - [**Cidadão de Primeira Linha**](#cidadão-de-primeira-linha)
@@ -999,6 +1000,52 @@ const pessoa = {
 
 for(let atributo in pessoa) {
     console.log(`${atributo} = ${pessoa[atributo]}`)
+}
+````
+[Topo](#curso-de-javascript-6)
+
+### **Usando a Estrutura FOR OF**
+>Ele percorre tanto um array quanto um map ou um set, mas diretamente retonando os valores 
+````javascript
+for (let letra of "Cod3r") {
+    console.log(letra)
+}
+
+const assuntosEcma = ['Map', 'Set', 'Promise']
+
+for (let i in assuntosEcma) {
+    console.log(i)
+}
+
+for (let assunto of assuntosEcma) {
+    console.log(assunto)
+}
+
+const assuntosMap = new Map([
+    ['Map', { abordado: true }],
+    ['Set', { abordado: true }],
+    ['Promise', { abordado: false }]
+])
+
+for (let assunto of assuntosMap) {
+    console.log(assunto)
+}
+
+for (let chave of assuntosMap.keys()) {
+    console.log(chave)
+}
+
+for (let valor of assuntosMap.values()) {
+    console.log(valor)
+}
+
+for (let [ch, vl] of assuntosMap.entries()) {
+    console.log(ch, vl)
+}
+
+const s = new Set(['a', 'b', 'c'])
+for (let letra of s) {
+    console.log(letra)
 }
 ````
 [Topo](#curso-de-javascript-6)
